@@ -1,0 +1,8 @@
+.navigation a svg {
+    width: 46px;
+    height: 46px;
+}
+.navigation ul li svg{
+    width: 26px;
+    height: 26px;
+}
