@@ -1,7 +1,7 @@
 import React from 'react';
-import SvgIcon from '../../svg/SvgIcon';
+import SvgIcon from '../../svg/svg_icon';
 
-const sidebar_bg_light = () => {
+const SidebarBgLight = () => {
     return (
         <aside className='sidebar bg-light'>
             <div className='tab-content h-100'>
@@ -27,7 +27,7 @@ const sidebar_bg_light = () => {
                                 </div>
 
                                 <div className='card-list'>
-                                    <a href='#' className='card border-0 text-reset'>
+                                    <a href='#' className='card border-0 text-reset sidebarActive'>
                                         <div className='card-body'>
                                             <div className='row gx-5'>
                                                 <div className='col-auto'>
@@ -142,4 +142,4 @@ const sidebar_bg_light = () => {
         </aside>
     );
 };
-export default sidebar_bg_light;
+export default SidebarBgLight;
