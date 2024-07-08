@@ -3,24 +3,28 @@ import React, { useEffect, useRef } from 'react';
 import SvgIcon from '../../svg/svg_icon';
 
 const MainChats = () => {
+    useEffect(() => {
+        const chatBody = document.querySelector('.chat-body');
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, []);
     return (
         <>
             <main className="main is-visible" data-dropzone-area="">
                 <div className='container h-100'>
-                    <div className="d-flex flex-column h-100 position-relative">
+                    <div className="d-flex flex-column h-100 position-relative" >
                         <div className='chat-header border-bottom py-4 py-lg-7'>
                             <div className='row align-items-center'>
                                 <div className='col-2 d-xl-none'>
-                                    <a className='icon icon-lg text-muted' href='#'>
+                                    <a className='icon icon-lg text-muted' href='#' data-toggle-chat="">
                                         <SvgIcon name="angle-left-solid" className="" />
                                     </a>
                                 </div>
                                 <div className='col-8 col-xl-12'>
-                                    <div className='row align-items-center text-center text-xl-start'>
+                                    <div className='row align-items-center text-xl-start'>
                                         <div className='col-12 col-xl-6'>
                                             <div className='row align-items-center gx-5'>
                                                 <div className='col-auto'>
-                                                    <div className='avatar d-none d-xl-inline-block'>
+                                                    <div className='avatar avatar-online'>
                                                         <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fmeo-vang-dua-ngon-tay-like.jpg?alt=media&token=03bd5eaf-d99d-4ce9-8e35-af10c77c2470' />
                                                     </div>
                                                 </div>
@@ -56,7 +60,7 @@ const MainChats = () => {
                                                     <a className='icon icon-lg text-muted p-3' href='#'>
                                                         <SvgIcon name="video-solid" className="camera" />
                                                     </a>
-                                                    <a className='icon icon-lg text-muted p-3' href='#'>
+                                                    <a className='icon icon-lg text-muted p-3' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">
                                                         <SvgIcon name="ellipsis-solid" className="" />
                                                     </a>
                                                 </div>
@@ -66,12 +70,74 @@ const MainChats = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-2 d-xl-none text-end">
+                                    <div className="d-flex justify-content-end align-items-center">
+                                        <a className="icon icon-lg text-muted p-3" href="#">
+                                            <div className="icon icon-lg">
+                                                <SvgIcon name="video-solid" className="camera" />
+                                            </div>
+                                        </a>
+                                        <div className="dropdown">
+                                            <a className="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <div className="icon icon-lg">
+                                                    <SvgIcon name="ellipsis-solid" className="" />
+                                                </div>
+                                            </a>
+                                            <ul className='dropdown-menu'>
+                                                <li>
+                                                    <a className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">Add member</a>
+                                                </li>
+                                                <li>
+                                                    <a className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">More</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div className='chat-body hide-scrollbar flex-1 h-100'>
+                        <div className='chat-body hide-scrollbar flex-1 h-100' >
+                            
                             <div className='chat-body-inner' style={{ paddingBottom: '87px' }}>
                                 <div className='py-6 py-lg-12'>
+
+                                    <div className='text-center py-10'>
+                                        <div className='row gy-6'>
+                                            <div className='col-12'>
+                                                <div className='avatar avatar-xl mx-auto'>
+                                                    <img className="avatar-img" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fmeo-vang-dua-ngon-tay-like.jpg?alt=media&amp;token=03bd5eaf-d99d-4ce9-8e35-af10c77c2470" />
+                                                </div>
+                                            </div>
+                                            <div className='col-12'>
+                                                <h4>dark</h4>
+
+                                            </div>
+                                            <div className='col-12'>
+                                                <div className='row d-flex justify-content-center'>
+                                                    <div className='col-auto'>
+                                                        <a className='avatar avatar-svg mx-auto' href='#'>
+                                                            <span className='avatar-text'>
+                                                                <SvgIcon name="user-plus-solid" className="" />
+                                                            </span>
+
+                                                        </a>
+                                                        <p className='py-3'>Thêm</p>
+                                                    </div>
+                                                    <div className='col-auto'>
+                                                        <a className='avatar  avatar-svg mx-auto' href='#'>
+                                                            <span className='avatar-text '>
+                                                                <SvgIcon name="pen-solid" className="" />
+                                                            </span>
+
+                                                        </a>
+                                                        <p className='py-3'>Tên</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div className='message-divider'>
                                         <small className='text-muted'>Monday, Sep 16</small>
                                     </div>
@@ -115,7 +181,7 @@ const MainChats = () => {
                                                                     <a className='dropdown-item d-flex align-items-center' href='#'>
                                                                         <span className='me-auto'>Edit</span>
                                                                         <div className='icon'>
-                                                                            <SvgIcon name="pen-solid" className="pen" />
+                                                                            <SvgIcon name="pen-solid" className="" />
                                                                         </div>
                                                                     </a>
                                                                 </li>
@@ -123,7 +189,7 @@ const MainChats = () => {
                                                                     <a className='dropdown-item d-flex align-items-center' href='#'>
                                                                         <span className='me-auto'>Reply</span>
                                                                         <div className='icon'>
-                                                                            <SvgIcon name="reply-solid" className="pen" />
+                                                                            <SvgIcon name="reply-solid" className="" />
                                                                         </div>
                                                                     </a>
                                                                 </li>
@@ -134,7 +200,7 @@ const MainChats = () => {
                                                                     <a className='dropdown-item d-flex align-items-center text-danger' href='#'>
                                                                         <span className='me-auto'>Delete</span>
                                                                         <div className='icon'>
-                                                                            <SvgIcon name="trash-solid" className="pen" />
+                                                                            <SvgIcon name="trash-solid" className="" />
                                                                         </div>
                                                                     </a>
                                                                 </li>
@@ -169,7 +235,7 @@ const MainChats = () => {
                                                                     <a className='dropdown-item d-flex align-items-center' href='#'>
                                                                         <span className='me-auto'>Edit</span>
                                                                         <div className='icon'>
-                                                                            <SvgIcon name="pen-solid" className="pen" />
+                                                                            <SvgIcon name="pen-solid" className="" />
                                                                         </div>
                                                                     </a>
                                                                 </li>
@@ -177,7 +243,7 @@ const MainChats = () => {
                                                                     <a className='dropdown-item d-flex align-items-center' href='#'>
                                                                         <span className='me-auto'>Reply</span>
                                                                         <div className='icon'>
-                                                                            <SvgIcon name="reply-solid" className="pen" />
+                                                                            <SvgIcon name="reply-solid" className="" />
                                                                         </div>
                                                                     </a>
                                                                 </li>
@@ -188,7 +254,7 @@ const MainChats = () => {
                                                                     <a className='dropdown-item d-flex align-items-center text-danger' href='#'>
                                                                         <span className='me-auto'>Delete</span>
                                                                         <div className='icon'>
-                                                                            <SvgIcon name="trash-solid" className="pen" />
+                                                                            <SvgIcon name="trash-solid" className="" />
                                                                         </div>
                                                                     </a>
                                                                 </li>
