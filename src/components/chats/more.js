@@ -11,9 +11,9 @@ const More = () => {
                     <a className="icon icon-lg text-muted" href="#" data-bs-dismiss="offcanvas">
                         <SvgIcon name="angle-left-solid" className="" />
                     </a>
-                    <div className='visibility-xl-invisible overflow-hidden text-center ' style={{ paddingBottom: '47px' }}>
-                        <h5 className='text-truncate'></h5>
-                        <p className='text-truncate'></p>
+                    <div className='visibility-xl-invisible overflow-hidden text-center'>
+                        <h5 className='text-truncate'>dark</h5>
+                        <p className='text-truncate'>100 members, 3 online</p>
                     </div>
                     <div className='dropdown'>
                         <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,23 +65,32 @@ const More = () => {
                             </div>
                             <div className='col-12'>
                                 <div className='row d-flex justify-content-center'>
-                                    <div className='col-auto'>
+                                    <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Turn off notifications</strong>">
                                         <a className='avatar avatar-svg mx-auto' href='#'>
                                             <span className='avatar-text'>
-                                                <SvgIcon name="user-plus-solid" className="" />
+                                                <SvgIcon name="bell-solid" className="" />
                                             </span>
 
                                         </a>
-                                        <p className='py-3'>Thêm</p>
+                                        <p className='py-3 text-truncate'>Turn off notifications</p>
                                     </div>
-                                    <div className='col-auto'>
+                                    {/* <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Turn it back on</strong>">
+                                        <a className='avatar avatar-svg mx-auto' href='#'>
+                                            <span className='avatar-text'>
+                                                <SvgIcon name="bell-slash-solid" className="" />
+                                            </span>
+
+                                        </a>
+                                        <p className='py-3 text-truncate'>Turn it back on</p>
+                                    </div> */}
+                                    <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Name</strong>">
                                         <a className='avatar  avatar-svg mx-auto' href='#'>
                                             <span className='avatar-text '>
                                                 <SvgIcon name="pen-solid" className="" />
                                             </span>
 
                                         </a>
-                                        <p className='py-3'>Tên</p>
+                                        <p className='py-3'>Name</p>
                                     </div>
                                 </div>
                             </div>

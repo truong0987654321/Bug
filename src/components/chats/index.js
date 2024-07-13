@@ -5,6 +5,7 @@ import Sidebar_bg_light from './sidebar_bg_light';
 import Main_chats from './main_chat';
 import More from './more';
 import MediaPreview from './media_preview';
+import AddMembers from './add_members';
 import Loading from '../loading'
 import jQuery from 'jquery';
 
@@ -13,8 +14,6 @@ const Chats = () => {
 
     useEffect(() => {
         jQuery(document).ready(() => {
-            console.log('jQuery is ready to use');
-
             // Dynamically create script elements and append them to the body
             const vendorScript = document.createElement('script');
             vendorScript.src = './assets/js/vendor.js';
@@ -48,8 +47,10 @@ const Chats = () => {
                         <Sidebar_bg_light />
                         <Main_chats />
                         <More />
+                        <AddMembers/>
                     </div>
                     <MediaPreview/>
+
                 </>
             )}
         </>

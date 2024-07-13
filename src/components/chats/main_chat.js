@@ -47,8 +47,8 @@ const MainChats = () => {
                                                         <a className='avatar avatar-sm' href='#'>
                                                             <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2FOIP.jpg?alt=media&token=f167f20a-40a9-4e7d-af97-4d2bca9249cf' />
                                                         </a>
-                                                        <a className='avatar avatar-sm' href='#'>
-                                                            <span className='avatar-text' data-bs-original-title="<strong>Add People</strong><p>Invite friends to group</p>">
+                                                        <a className='avatar avatar-sm' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">
+                                                            <span className='avatar-text' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="<strong>Add People</strong><p>Invite friends to group</p>">
                                                                 <SvgIcon name="plus-solid" className="" />
                                                             </span>
                                                         </a>
@@ -57,7 +57,7 @@ const MainChats = () => {
                                                 </div>
 
                                                 <div className='col-auto'>
-                                                    <a className='icon icon-lg text-muted p-3' href='#'>
+                                                    <a className='icon icon-lg text-muted px-4' href='#'>
                                                         <SvgIcon name="video-solid" className="camera" />
                                                     </a>
                                                     <a className='icon icon-lg text-muted p-3' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">
@@ -72,7 +72,7 @@ const MainChats = () => {
                                 </div>
                                 <div className="col-2 d-xl-none text-end">
                                     <div className="d-flex justify-content-end align-items-center">
-                                        <a className="icon icon-lg text-muted p-3" href="#">
+                                        <a className="icon icon-lg text-muted px-4" href="#">
                                             <div className="icon icon-lg">
                                                 <SvgIcon name="video-solid" className="camera" />
                                             </div>
