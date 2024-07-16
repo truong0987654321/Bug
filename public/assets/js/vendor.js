@@ -8622,10 +8622,11 @@
                                 var l, c = function(n) {
                                     return n.preventDefault(),
                                     n.stopPropagation(),
-                                    e.status === b.UPLOADING ? b.confirm(t.options.dictCancelUploadConfirmation, (function() {
-                                        return t.removeFile(e)
-                                    }
-                                    )) : t.options.dictRemoveFileConfirmation ? b.confirm(t.options.dictRemoveFileConfirmation, (function() {
+                                    // e.status === b.UPLOADING ? b.confirm(t.options.dictCancelUploadConfirmation, (function() {
+                                    //     return t.removeFile(e)
+                                    // }
+                                    // )) :
+                                     t.options.dictRemoveFileConfirmation ? b.confirm(t.options.dictRemoveFileConfirmation, (function() {
                                         return t.removeFile(e)
                                     }
                                     )) : t.removeFile(e)
@@ -8998,7 +8999,7 @@
                                     e.hiddenFileInput.style.left = "0",
                                     e.hiddenFileInput.style.height = "0",
                                     e.hiddenFileInput.style.width = "0",
-                                    // r.getElement(e.options.hiddenInputContainer, "hiddenInputContainer").appendChild(e.hiddenFileInput),
+                                    r.getElement(e.options.hiddenInputContainer, "hiddenInputContainer").appendChild(e.hiddenFileInput),
                                     e.hiddenFileInput.addEventListener("change", (function() {
                                         var n = e.hiddenFileInput.files;
                                         if (n.length) {
@@ -9843,7 +9844,7 @@
                                     var E = t[w];
                                     d.append(E.name, E.data, E.filename)
                                 }
-                                this.submitRequest(o, d, e)
+                                // this.submitRequest(o, d, e)
                             }
                         }, {
                             key: "_transformFiles",
@@ -9958,12 +9959,14 @@
                                     this._errorProcessing(e, n || this.options.dictResponseError.replace("{{statusCode}}", t.status), t)
                                 }
                             }
-                        }, {
-                            key: "submitRequest",
-                            value: function(e, t, n) {
-                                1 == e.readyState ? e.send(t) : console.warn("Cannot send this request because the XMLHttpRequest.readyState is not OPENED.")
-                            }
-                        }, {
+                        }
+                        // ,{
+                        //     key: "submitRequest",
+                        //     value: function(e, t, n) {
+                        //         1 == e.readyState ? e.send(t) : console.warn("Cannot send this request because the XMLHttpRequest.readyState is not OPENED.")
+                        //     }
+                        // }
+                        , {
                             key: "_finished",
                             value: function(e, t, n) {
                                 var i, o = u(e, !0);
@@ -10160,8 +10163,7 @@
                         var n;
                         if ("string" == typeof e ? n = document.querySelector(e) : null != e.nodeType && (n = e),
                         null == n)
-                            // throw new Error("Invalid `".concat(t, "` option provided. Please provide a CSS selector or a plain HTML element."));
-                            
+                            throw new Error("Invalid `".concat(t, "` option provided. Please provide a CSS selector or a plain HTML element."));
                         return n
                     }
                     ,

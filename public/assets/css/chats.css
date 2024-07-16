@@ -47,6 +47,27 @@
 .svg-w-2rem .dropdown-item {
     padding: .5rem .5rem;
 }
-.svg-m-r svg{
- margin-left: 4px;
+
+.svg-m-r svg {
+    margin-left: 4px;
+}
+
+.search-messages {
+    position: sticky;
+    top: 0px;
+    padding-top: 20px;
+    background-color: rgba(246, 249, 251,1) !important;
+    z-index: 10;
+    height: 96px;
+}
+.highlight{
+    color: rgba(39, 135, 245, 1) !important;
+}
+.main{
+    z-index: 11;
+}
+@media (max-width: 1199.98px) {
+    nav.navigation{
+        overflow: hidden;
+    }
 }

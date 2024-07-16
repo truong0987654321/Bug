@@ -1,33 +1,25 @@
 import React from 'react';
-import SvgIcon from '../../svg/svg_icon';
 
-const SidebarBgLight = () => {
+
+
+const Loading = () => {
+
+
     return (
-        <aside className='sidebar bg-light'>
-            <div className='tab-content h-100'>
-                <div className='tab-pane fade h-100 active show' id='tab-content-chats'>
-                    <div className='d-flex flex-column h-100 position-relative'>
-                        <div className='hide-scrollbar'>
-                            <div className='container py-8'>
-                                <div className='mb-8'>
-                                    <div className='fw-bold m-0'>Chats</div>
-                                </div>
-
-                                <div className='mb-6'>
-                                    <form action=''>
-                                        <div className='input-group'>
-                                            <div className='input-group-text'>
-                                                <div className='icon icon-lg'>
-                                                    <SvgIcon name="magnifying-glass-solid" className="magnifying" />
-                                                </div>
-                                            </div>
-                                            <input className='form-control form-control-lg ps-0' placeholder="Search messages or users" />
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div className='card-list'>
-                                    <a href='#' className='card border-0 text-reset sidebarActive'>
+        <>
+            <main className='main'>
+                <div className='container h-100'>
+                    <div className='d-flex flex-column h-100 justify-content-center text-center'>
+                        <div className='mb-6'>
+                            Loading...
+                        </div>
+                        <div className='text-muted'>
+                            <p className='text-muted'>Please wait a moment</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            {/* <a href='#' className='card border-0 text-reset sidebarActive'>
                                         <div className='card-body'>
                                             <div className='row gx-5'>
                                                 <div className='col-auto'>
@@ -109,8 +101,8 @@ const SidebarBgLight = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
-                                    <a href='#' className='card border-0 text-reset'>
+                                    </a> 
+                                        <a href='#' className='card border-0 text-reset'>
                                         <div className='card-body'>
                                             <div className='row gx-5'>
                                                 <div className='col-auto'>
@@ -131,15 +123,9 @@ const SidebarBgLight = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='tab-pane fade h-100'></div>
-            </div>
-        </aside>
+                                    </a> */}
+        </>
     );
 };
-export default SidebarBgLight;
+
+export default Loading;
