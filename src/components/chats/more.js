@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgIcon from '../../svg/svg_icon';
 
 const More = () => {
 
@@ -9,7 +8,7 @@ const More = () => {
             <div className="offcanvas offcanvas-end offcanvas-aside" data-bs-scroll="true" data-bs-backdrop="false" id="offcanvas-more" aria-hidden="true">
                 <div className='offcanvas-header py-4 py-lg-7 border-bottom'>
                     <a className="icon icon-lg text-muted" href="#" data-bs-dismiss="offcanvas">
-                        <SvgIcon name="angle-left-solid" className="" />
+                        <i className='icon-angle-left'></i>
                     </a>
                     <div className='visibility-xl-invisible overflow-hidden text-center'>
                         <h5 className='text-truncate'>dark</h5>
@@ -17,14 +16,14 @@ const More = () => {
                     </div>
                     <div className='dropdown'>
                         <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <SvgIcon name="ellipsis-vertical-solid" className="" />
+                            <i className='icon-ellipsis-vertical'></i>
                         </a>
                         <ul className='dropdown-menu'>
                             <li>
                                 <a href="#" className="dropdown-item d-flex align-items-center">
                                     Edit
                                     <div className="icon ms-auto">
-                                        <SvgIcon name="pen-solid" className="" />
+                                        <i className='icon-pen'></i>
                                     </div>
                                 </a>
                             </li>
@@ -32,7 +31,7 @@ const More = () => {
                                 <a href="#" className="dropdown-item d-flex align-items-center">
                                     Mute
                                     <div className="icon ms-auto">
-                                        <SvgIcon name="bell-solid" className="" />
+                                        <i className='icon-bell'></i>
                                     </div>
                                 </a>
                             </li>
@@ -43,7 +42,7 @@ const More = () => {
                                 <a href="#" className="dropdown-item d-flex align-items-center text-danger">
                                     Leave
                                     <div className="icon ms-auto">
-                                        <SvgIcon name="right-from-bracket-solid" className="" />
+                                        <i className='icon-right-from-bracket'></i>
                                     </div>
                                 </a>
                             </li>
@@ -68,7 +67,7 @@ const More = () => {
                                     <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Turn off notifications</strong>">
                                         <a className='avatar avatar-svg mx-auto' href='#'>
                                             <span className='avatar-text'>
-                                                <SvgIcon name="bell-solid" className="" />
+                                                <i className='icon-bell'></i>
                                             </span>
 
                                         </a>
@@ -77,7 +76,7 @@ const More = () => {
                                     {/* <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Turn it back on</strong>">
                                         <a className='avatar avatar-svg mx-auto' href='#'>
                                             <span className='avatar-text'>
-                                                <SvgIcon name="bell-slash-solid" className="" />
+                                                <i className='icon-bell-slash'></i>
                                             </span>
 
                                         </a>
@@ -86,9 +85,8 @@ const More = () => {
                                     <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Name</strong>">
                                         <a className='avatar  avatar-svg mx-auto' href='#'>
                                             <span className='avatar-text '>
-                                                <SvgIcon name="pen-solid" className="" />
+                                                <i className='icon-pen'></i>
                                             </span>
-
                                         </a>
                                         <p className='py-3'>Name</p>
                                     </div>
@@ -135,14 +133,14 @@ const More = () => {
                                         <div className='col-auto'>
                                             <div className='dropdown'>
                                                 <a className="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <SvgIcon name="ellipsis-vertical-solid" className="" />
+                                                    <i className='icon-ellipsis-vertical'></i>
                                                 </a>
                                                 <ul className='dropdown-menu'>
                                                     <li>
                                                         <a className='dropdown-item d-flex align-items-center'>
-                                                            View profile
-                                                            <div className='className="icon ms-auto"'>
-                                                                <SvgIcon name="right-from-bracket-solid" className="" />
+                                                            hmm
+                                                            <div className="icon ms-auto">
+                                                                <i className='icon-right-from-bracket'></i>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -152,8 +150,8 @@ const More = () => {
                                                     <li>
                                                         <a className='dropdown-item d-flex align-items-center text-danger'>
                                                             Delete
-                                                            <div className='className="icon ms-auto"'>
-                                                                <SvgIcon name="right-from-bracket-solid" className="" />
+                                                            <div className="icon ms-auto">
+                                                                <i className='icon-trash'></i>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -181,11 +179,10 @@ const More = () => {
                                             <div className='avatar-group'>
                                                 <a href='#' className='avatar avatar-sm'>
                                                     <img className="avatar-img" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8" />
-
                                                 </a>
                                                 <a href='#' className='avatar avatar-sm'>
                                                     <span className='avatar-text bg-primary svg-m-r'>
-                                                        <SvgIcon name="file-lines-solid" className="" />
+                                                        <i className='icon-file-lines'></i>
                                                     </span>
                                                 </a>
                                             </div>
@@ -208,14 +205,14 @@ const More = () => {
                                         <div className='col-auto'>
                                             <div className='dropdown svg-w-2rem'>
                                                 <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <SvgIcon name="ellipsis-vertical-solid" className="" />
+                                                    <i className='icon-ellipsis-vertical'></i>
                                                 </a>
                                                 <ul className='dropdown-menu'>
                                                     <li>
                                                         <a href="#" className="dropdown-item d-flex align-items-center">
                                                             Download
                                                             <div className="icon ms-auto">
-                                                                <SvgIcon name="cloud-arrow-down-solid" className="" />
+                                                                <i className='icon-cloud-arrow-down'></i>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -223,7 +220,7 @@ const More = () => {
                                                         <a href="#" className="dropdown-item d-flex align-items-center">
                                                             Share
                                                             <div className="icon ms-auto">
-                                                                <SvgIcon name="share-nodes-solid" className="" />
+                                                                <i className='icon-share-nodes'></i>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -234,7 +231,7 @@ const More = () => {
                                                         <a href="#" className="dropdown-item d-flex align-items-center text-danger">
                                                             Delete
                                                             <div className="icon ms-auto">
-                                                                <SvgIcon name="trash-solid" className="" />
+                                                                <i className='icon-trash'></i>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -248,7 +245,6 @@ const More = () => {
                     </div>
                 </div>
             </div>
-
         </>
     );
 };

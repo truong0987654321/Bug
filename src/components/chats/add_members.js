@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgIcon from '../../svg/svg_icon';
 
 const AddMembers = () => {
 
@@ -8,14 +7,14 @@ const AddMembers = () => {
             <div className='offcanvas offcanvas-end offcanvas-aside' data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvas-add-members" style={{ visibility: 'hidden' }} aria-hidden="true">
                 <div className='offcanvas-header py-4 py-lg-7 border-bottom '>
                     <a className="icon icon-lg text-muted" href="#" data-bs-dismiss="offcanvas">
-                        <SvgIcon name="angle-left-solid" className="" />
+                        <i className='icon-angle-left'></i>
                     </a>
                     <div className='visibility-xl-invisible overflow-hidden text-center'>
                         <h5 className='text-truncate'>Members</h5>
                         <p className='text-truncate'>Add new members</p>
                     </div>
                     <a className="icon icon-lg text-muted" data-bs-toggle="collapse" href="#search-members" role="button" aria-expanded="false" aria-controls="search-members">
-                        <SvgIcon name="filter-solid" className="" />
+                        <i className='icon-filter'></i>
                     </a>
                 </div>
                 <div className='offcanvas-body hide-scrollbar py-0'>
@@ -25,7 +24,7 @@ const AddMembers = () => {
                                 <div className='input-group'>
                                     <div className='input-group-text' id='search-user'>
                                         <div className='icon icon-lg'>
-                                            <SvgIcon name="magnifying-glass-solid" className="" />
+                                            <i className='icon-magnifying-glass'></i>
                                         </div>
                                     </div>
                                     <input className='form-control form-control-lg ps-0' type='text' placeholder='User name ' aria-label='User name' aria-describedby="search-user" />
@@ -86,7 +85,7 @@ const AddMembers = () => {
                     <a className='btn btn-lg btn-primary w-100 d-flex align-items-center' href='#'>
                         Add members
                         <span className='icon ms-auto' style={{ transform: 'rotate(180deg)' }}>
-                            <SvgIcon name="angle-left-solid" className="" />
+                            <i className='icon-angle-left'></i>
                         </span>
                     </a>
                 </div>

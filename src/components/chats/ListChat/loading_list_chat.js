@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgIcon from '../../../svg/svg_icon';
 const LoadingListChat = () => {
     return (
         <>
@@ -7,7 +6,7 @@ const LoadingListChat = () => {
                 <div className='tab-content h-100'>
                     <div className='tab-pane fade h-100 active show' id='tab-content-chats'>
                         <div className='d-flex flex-column h-100 position-relative'>
-                            <div className='hide-scrollbar' style={{ overflow: 'hidden' ,height: '100vh'}}>
+                            <div className='hide-scrollbar' style={{ overflow: 'hidden', height: '100vh' }}>
                                 <div className='container py-8'>
                                     <div className='mb-8'>
                                         <div className='fw-bold m-0'>
@@ -34,7 +33,10 @@ const LoadingListChat = () => {
                                                 <div className='row gx-5'>
                                                     <div className='col-auto'>
                                                         <div className='avatar'>
-                                                            <SvgIcon name="placeholder_img" className="avatar-img placeholder-img" />
+                                                            <svg className="avatar-img placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                                <title>Placeholder</title>
+                                                                <rect width="100%" height="100%" fill="#868e96"></rect>
+                                                            </svg>
                                                         </div>
                                                     </div>
                                                     <div className='col'>
@@ -56,29 +58,10 @@ const LoadingListChat = () => {
                                                 <div className='row gx-5'>
                                                     <div className='col-auto'>
                                                         <div className='avatar'>
-                                                            <SvgIcon name="placeholder_img" className="avatar-img placeholder-img" />
-                                                        </div>
-                                                    </div>
-                                                    <div className='col'>
-                                                        <div className='d-flex align-items-center mb-3'>
-                                                            <h5 className='placeholder-glow w-100 mb-0'>
-                                                                <span className='placeholder col-5'></span>
-                                                            </h5>
-                                                        </div>
-                                                        <div className='placeholder-glow'>
-                                                            <span className='placeholder col-12'></span>
-                                                            <span className='placeholder col-8'></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div  className='card border-0 text-reset'>
-                                            <div className='card-body'>
-                                                <div className='row gx-5'>
-                                                    <div className='col-auto'>
-                                                        <div className='avatar'>
-                                                            <SvgIcon name="placeholder_img" className="avatar-img placeholder-img" />
+                                                            <svg className="avatar-img placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                                <title>Placeholder</title>
+                                                                <rect width="100%" height="100%" fill="#868e96"></rect>
+                                                            </svg>
                                                         </div>
                                                     </div>
                                                     <div className='col'>
@@ -100,7 +83,35 @@ const LoadingListChat = () => {
                                                 <div className='row gx-5'>
                                                     <div className='col-auto'>
                                                         <div className='avatar'>
-                                                            <SvgIcon name="placeholder_img" className="avatar-img placeholder-img" />
+                                                            <svg className="avatar-img placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                                <title>Placeholder</title>
+                                                                <rect width="100%" height="100%" fill="#868e96"></rect>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col'>
+                                                        <div className='d-flex align-items-center mb-3'>
+                                                            <h5 className='placeholder-glow w-100 mb-0'>
+                                                                <span className='placeholder col-5'></span>
+                                                            </h5>
+                                                        </div>
+                                                        <div className='placeholder-glow'>
+                                                            <span className='placeholder col-12'></span>
+                                                            <span className='placeholder col-8'></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='card border-0 text-reset'>
+                                            <div className='card-body'>
+                                                <div className='row gx-5'>
+                                                    <div className='col-auto'>
+                                                        <div className='avatar'>
+                                                            <svg className="avatar-img placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                                                <title>Placeholder</title>
+                                                                <rect width="100%" height="100%" fill="#868e96"></rect>
+                                                            </svg>
                                                         </div>
                                                     </div>
                                                     <div className='col'>

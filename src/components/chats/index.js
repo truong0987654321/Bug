@@ -5,6 +5,9 @@ import MainChats from './ChatMessage/main_chat';
 import { Helmet } from 'react-helmet';
 import MediaPreview from './media_preview';
 import Loading from './loading'
+import { useAppstore } from '../../store';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const Chats = () => {
@@ -63,7 +66,8 @@ const Chats = () => {
                     "content": {
                         "type": "file",
                         "file_name": "document.pdf",
-                        "file_url": "http://example.com/document.pdf"
+                        "file_url": "http://example.com/document.pdf",
+                        "file_size": "1.6 GB"
                     },
                     "sent_at": "2024-07-13T10:05:00Z",
                     "status": "read"
@@ -73,7 +77,7 @@ const Chats = () => {
                     "sender_id": user[2].user_id,
                     "sender_username": user[2].username,
                     "content": "Meo meo meow meo meo meo meow meoww mmeo meo meo meo mewwwww meow???",
-                    "sent_at": "2024-07-14T10:00:00Z",
+                    "sent_at": "2024-07-13T11:00:00Z",
                     "status": "unread"
                 }
             ]
@@ -92,7 +96,7 @@ const Chats = () => {
                     "sender_id": user[0].user_id,
                     "sender_username": user[0].username,
                     "content": "Chào bạn!",
-                    "sent_at": "2023-07-13T11:00:00Z",
+                    "sent_at": "2024-07-12T12:45:00Z",
                     "status": "read"
                 },
                 {
@@ -100,7 +104,7 @@ const Chats = () => {
                     "sender_id": user[3].user_id,
                     "sender_username": user[3].username,
                     "content": "Chào user1!",
-                    "sent_at": "2024-07-13T12:45:00Z",
+                    "sent_at": "2024-07-13T10:05:00Z",
                     "status": "read"
                 }
             ]
@@ -127,7 +131,7 @@ const Chats = () => {
                     "sender_id": user[2].user_id,
                     "sender_username": user[2].username,
                     "content": "Chào user1!",
-                    "sent_at": "2023-07-14T12:45:00Z",
+                    "sent_at": "2023-07-13T12:45:00Z",
                     "status": "unread"
                 },
                 {
@@ -135,13 +139,36 @@ const Chats = () => {
                     "sender_id": user[0].user_id,
                     "sender_username": user[0].username,
                     "content": "Chào bạn!",
-                    "sent_at": "2023-07-13T11:00:00Z",
+                    "sent_at": "2023-07-15T11:00:00Z",
                     "status": "unread"
+                },
+                {
+                    "id": "m" + user[0].user_id,
+                    "sender_id": user[0].user_id,
+                    "sender_username": user[0].username,
+                    "content": {
+                        "type": "file",
+                        "file_name": "document.pdf",
+                        "file_url": "http://example.com/document.pdf",
+                        "file_size": "1.6 GB"
+                    },
+                    "sent_at": "2024-07-26T10:05:00Z",
+                    "status": "read"
                 },
 
             ]
         }
     ];
+    const { userInfo } = useAppstore();
+    const navigate = useNavigate();
+    useEffect(() => {
+        // if (!userInfo.profileSetup) {
+        //     toast('Please setup profile to continue.');
+        //     navigate("/profile");
+        // }
+    }, [userInfo, navigate])
+
+
     const currentUser = user.find(u => u.user_id === currentUserId);
 
     const unreadCount = chats.reduce((count, chat) => {
@@ -150,6 +177,7 @@ const Chats = () => {
     }, 0);
     const [componentsReady, setComponentsReady] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
 
         const navbarReady = true;
@@ -158,31 +186,35 @@ const Chats = () => {
         if (navbarReady && sidebarReady && mainChatsReady) {
             setComponentsReady(true);
         }
-
     }, []);
     useEffect(() => {
         if (componentsReady) {
-            const timer = setTimeout(() => {
-                setIsLoading(false);
-            }, 2000);
-            return () => clearTimeout(timer);
+            setIsLoading(false);
+            // const timer = setTimeout(() => {
+            // }, 2000);
+            // return () => clearTimeout(timer);
         }
     }, [componentsReady]);
 
 
     const [selectedChatId, setSelectedChatId] = useState(null);
+    const [isActive, setIsActive] = useState(false);
 
     const handleChatSelect = (chatId) => {
         setSelectedChatId(chatId);
+        setIsActive(true);
     };
-
     return (
         <>
             {!componentsReady ? (
                 <Loading />
             ) : (
                 <>
-
+                    <Helmet>
+                        <title>Home | Bug</title>
+                        <script src="./assets/js/vendor.js" async />
+                        <script src="./assets/js/template.js" async />
+                    </Helmet>
                     <div className='layout overflow-hidden position-absolute w-100'>
                         <Navbar currentUser={currentUser} unreadCount={unreadCount} />
                         <SidebarBgLight
@@ -191,8 +223,13 @@ const Chats = () => {
                             currentUserId={currentUserId}
                             onChatSelect={handleChatSelect}
                         />
-                        <MainChats chats={chats} chatId={selectedChatId} currentUserId={currentUserId} />
-
+                        <MainChats
+                            isActive={isActive}
+                            setIsActive={setIsActive}
+                            chats={chats}
+                            chatId={selectedChatId}
+                            currentUserId={currentUserId}
+                        />
                     </div>
                     <MediaPreview />
 

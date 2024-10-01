@@ -1,7 +1,11 @@
-import React from "react";
-import SvgIcon from '../../../svg/svg_icon';
+import React from 'react';
 
-const ChatHeader = ({ chat, currentUserId }) => {
+const ChatHeader = ({ chat, currentUserId, setIsActive }) => {
+
+    const handleClick = () => {
+        setIsActive(false);
+    };
+
     const currentUser = chat.participants.find(user => user.user_id !== currentUserId);
     const getAvatarClass = (chat) => {
         if (chat.chat_name) {
@@ -19,8 +23,8 @@ const ChatHeader = ({ chat, currentUserId }) => {
             <div className='chat-header border-bottom py-4 py-lg-7'>
                 <div className='row align-items-center'>
                     <div className='col-2 d-xl-none'>
-                        <a className='icon icon-lg text-muted' href='#' data-toggle-chat="">
-                            <SvgIcon name="angle-left-solid" className="" />
+                        <a className='icon icon-lg text-muted' onClick={handleClick} href='#' data-toggle-chat="">
+                            <i className='icon-angle-left'></i>
                         </a>
                     </div>
                     <div className='col-8 col-xl-12'>
@@ -68,7 +72,7 @@ const ChatHeader = ({ chat, currentUserId }) => {
 
                                                 <a className='avatar avatar-sm' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">
                                                     <span className='avatar-text' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="<strong>Add People</strong><p>Invite friends to group</p>">
-                                                        <SvgIcon name="plus-solid" className="" />
+                                                        <i className='icon-plus' style={{ fontSize: '.7rem' }}></i>
                                                     </span>
                                                 </a>
 
@@ -81,10 +85,10 @@ const ChatHeader = ({ chat, currentUserId }) => {
 
                                     <div className='col-auto'>
                                         <a className='icon icon-lg text-muted px-4' href='#'>
-                                            <SvgIcon name="video-solid" className="camera" />
+                                            <i className='camera icon-video'></i>
                                         </a>
                                         <a className='icon icon-lg text-muted p-3' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">
-                                            <SvgIcon name="ellipsis-solid" className="" />
+                                            <i className='icon-ellipsis'></i>
                                         </a>
                                     </div>
 
@@ -97,24 +101,33 @@ const ChatHeader = ({ chat, currentUserId }) => {
                         <div className="d-flex justify-content-end align-items-center">
                             <a className="icon icon-lg text-muted px-4" href="#">
                                 <div className="icon icon-lg">
-                                    <SvgIcon name="video-solid" className="camera" />
+                                    <i className='camera icon-video'></i>
                                 </div>
                             </a>
-                            <div className="dropdown">
-                                <a className="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {chat.chat_name ? (
+                                <div className="dropdown">
+                                    <a className="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div className="icon icon-lg">
+                                            <i className='icon-ellipsis'></i>
+                                        </div>
+                                    </a>
+                                    <ul className='dropdown-menu'>
+                                        <li>
+                                            <a href='#' className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">Add member</a>
+                                        </li>
+                                        <li>
+                                            <a href='#' className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">More</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            ) : (
+                                <a href="#" className="icon icon-lg text-muted" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more">
                                     <div className="icon icon-lg">
-                                        <SvgIcon name="ellipsis-solid" className="" />
+                                        <i className='icon-ellipsis'></i>
                                     </div>
                                 </a>
-                                <ul className='dropdown-menu'>
-                                    <li>
-                                        <a className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">Add member</a>
-                                    </li>
-                                    <li>
-                                        <a className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">More</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            )}
+
                         </div>
                     </div>
                 </div>

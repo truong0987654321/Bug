@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgIcon from '../../svg/svg_icon';
 
 const MediaPreview = () => {
     return (
@@ -12,14 +11,14 @@ const MediaPreview = () => {
                             <div>
                                 <div className='dropdown svg-w-2rem'>
                                     <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <SvgIcon name="ellipsis-vertical-solid" className="" />
+                                        <i className='icon-ellipsis-vertical'></i>
                                     </a>
                                     <ul className='dropdown-menu'>
                                         <li>
                                             <a href="#" className="dropdown-item d-flex align-items-center">
                                                 Download
                                                 <div className="icon ms-auto">
-                                                    <SvgIcon name="cloud-arrow-down-solid" className="" />
+                                                    <i className='icon-cloud-arrow-down'></i>
                                                 </div>
                                             </a>
                                         </li>
@@ -27,7 +26,7 @@ const MediaPreview = () => {
                                             <a href="#" className="dropdown-item d-flex align-items-center">
                                                 Share
                                                 <div className="icon ms-auto">
-                                                    <SvgIcon name="share-nodes-solid" className="" />
+                                                    <i className='icon-share-nodes'></i>
                                                 </div>
                                             </a>
                                         </li>
@@ -38,7 +37,7 @@ const MediaPreview = () => {
                                             <a href="#" className="dropdown-item d-flex align-items-center text-danger">
                                             Delete
                                                 <div className="icon ms-auto">
-                                                    <SvgIcon name="trash-solid" className="" />
+                                                    <i className='icon-trash'></i>
                                                 </div>
                                             </a>
                                         </li>

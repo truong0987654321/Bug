@@ -270,7 +270,7 @@ figure {
     margin: 0 0 1rem
 }
 
-img,svg {
+img,svg,i {
     vertical-align: middle
 }
 
