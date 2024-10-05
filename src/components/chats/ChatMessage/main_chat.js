@@ -64,7 +64,7 @@ const MainChats = ({ chatId, chats, currentUserId, isActive, setIsActive }) => {
                 textarea.style.overflowY = 'scroll'; // Thêm thanh cuộn khi vượt quá số hàng tối đa
             }
         }
-    }, [text]);
+}, [text, maxHeight, rowHeight]);
     const handleKeyUp = (e) => {
         if (e.key === 'Enter' && e.shiftKey) {
             e.preventDefault(); // Ngăn hành vi mặc định của Enter (thay vì xuống hàng)
@@ -74,7 +74,7 @@ const MainChats = ({ chatId, chats, currentUserId, isActive, setIsActive }) => {
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-            const chat_form = document.querySelector('.chat-form')
+            // const chat_form = document.querySelector('.chat-form')
         }
     };
 
@@ -126,14 +126,14 @@ const MainChats = ({ chatId, chats, currentUserId, isActive, setIsActive }) => {
                                 </div>
                                 <div className='row align-items-end'>
                                     <div className='col-auto ' style={{ paddingRight: 6 }}>
-                                        <a href={'#'} className="btn btn-icon btn-link text-body rounded-circle dz-clickable hover-btn" id="dz-btn" style={{ textDecoration: 'none' }}>
+                                        <a href={'/'} className="btn btn-icon btn-link text-body rounded-circle dz-clickable hover-btn" id="dz-btn" style={{ textDecoration: 'none' }}>
                                             <i className='icon-paperclip'></i>
                                         </a>
                                     </div>
                                     <div className='col rounded-pill bg-dark' style={{ borderRadius: '26px !important' }}>
                                         <div className='input-group'>
                                             <textarea ref={textareaRef} onKeyDown={handleKeyDown} onKeyUp={handleKeyUp} onChange={handleChange} className='form-control custom-scrollbar px-0' placeholder="Type your message..." rows="1" data-emoji-input='' data-autosize='' style={{ overflowWrap: 'break-word', resize: 'none', height: '46.5556px' }}></textarea>
-                                            <a href="#" className="input-group-text text-body align-items-end pe-0" data-emoji-btn='' style={{ paddingBottom: '13px' }}>
+                                            <a href="/" className="input-group-text text-body align-items-end pe-0" data-emoji-btn='' style={{ paddingBottom: '13px' }}>
                                                 <span className='icon icon-lg'>
                                                     <i className='icon-face-smile-regular'></i>
                                                 </span>

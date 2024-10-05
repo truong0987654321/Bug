@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Bug';
-  src:  url('fonts/Bug.eot?9dhnr8');
-  src:  url('fonts/Bug.eot?9dhnr8#iefix') format('embedded-opentype'),
-    url('fonts/Bug.ttf?9dhnr8') format('truetype'),
-    url('fonts/Bug.woff?9dhnr8') format('woff'),
-    url('fonts/Bug.svg?9dhnr8#Bug') format('svg');
+  src:  url('fonts/Bug.eot?o83bxj');
+  src:  url('fonts/Bug.eot?o83bxj#iefix') format('embedded-opentype'),
+    url('fonts/Bug.ttf?o83bxj') format('truetype'),
+    url('fonts/Bug.woff?o83bxj') format('woff'),
+    url('fonts/Bug.svg?o83bxj#Bug') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -19,6 +19,21 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-image:before {
+  content: "\e91e";
+}
+.icon-pen-to-square:before {
+  content: "\e91d";
+}
+.icon-caret-down:before {
+  content: "\e91c";
+}
+.icon-caret-left:before {
+  content: "\e91b";
+}
+.icon-envelope-regular:before {
+  content: "\e91a";
+}
 .icon-bug:before {
   content: "\e900";
 }

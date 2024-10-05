@@ -23,7 +23,7 @@ const ChatHeader = ({ chat, currentUserId, setIsActive }) => {
             <div className='chat-header border-bottom py-4 py-lg-7'>
                 <div className='row align-items-center'>
                     <div className='col-2 d-xl-none'>
-                        <a className='icon icon-lg text-muted' onClick={handleClick} href='#' data-toggle-chat="">
+                        <a className='icon icon-lg text-muted' onClick={handleClick} href='/' data-toggle-chat="">
                             <i className='icon-angle-left'></i>
                         </a>
                     </div>
@@ -65,12 +65,12 @@ const ChatHeader = ({ chat, currentUserId, setIsActive }) => {
                                         <div className='col-auto'>
                                             <div className='avatar-group'>
                                                 {chat.participants.slice(0, 3).map(participant => (
-                                                    <a href='#' className='avatar avatar-sm' key={participant.user_id}>
+                                                    <a href='/' className='avatar avatar-sm' key={participant.user_id}>
                                                         <img src={participant.avatar} className='avatar-img' alt={participant.username} />
                                                     </a>
                                                 ))}
 
-                                                <a className='avatar avatar-sm' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">
+                                                <a className='avatar avatar-sm' href='/' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">
                                                     <span className='avatar-text' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="<strong>Add People</strong><p>Invite friends to group</p>">
                                                         <i className='icon-plus' style={{ fontSize: '.7rem' }}></i>
                                                     </span>
@@ -84,10 +84,10 @@ const ChatHeader = ({ chat, currentUserId, setIsActive }) => {
                                     )}
 
                                     <div className='col-auto'>
-                                        <a className='icon icon-lg text-muted px-4' href='#'>
+                                        <a className='icon icon-lg text-muted px-4' href='/'>
                                             <i className='camera icon-video'></i>
                                         </a>
-                                        <a className='icon icon-lg text-muted p-3' href='#' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">
+                                        <a className='icon icon-lg text-muted p-3' href='/' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">
                                             <i className='icon-ellipsis'></i>
                                         </a>
                                     </div>
@@ -99,29 +99,29 @@ const ChatHeader = ({ chat, currentUserId, setIsActive }) => {
                     </div>
                     <div className="col-2 d-xl-none text-end">
                         <div className="d-flex justify-content-end align-items-center">
-                            <a className="icon icon-lg text-muted px-4" href="#">
+                            <a className="icon icon-lg text-muted px-4" href="/">
                                 <div className="icon icon-lg">
                                     <i className='camera icon-video'></i>
                                 </div>
                             </a>
                             {chat.chat_name ? (
                                 <div className="dropdown">
-                                    <a className="text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="text-muted" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <div className="icon icon-lg">
                                             <i className='icon-ellipsis'></i>
                                         </div>
                                     </a>
                                     <ul className='dropdown-menu'>
                                         <li>
-                                            <a href='#' className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">Add member</a>
+                                            <a href='/' className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-add-members" aria-controls="offcanvas-add-members">Add member</a>
                                         </li>
                                         <li>
-                                            <a href='#' className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">More</a>
+                                            <a href='/' className='dropdown-item' data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more-group">More</a>
                                         </li>
                                     </ul>
                                 </div>
                             ) : (
-                                <a href="#" className="icon icon-lg text-muted" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more">
+                                <a href="/" className="icon icon-lg text-muted" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-more" aria-controls="offcanvas-more">
                                     <div className="icon icon-lg">
                                         <i className='icon-ellipsis'></i>
                                     </div>

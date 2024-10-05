@@ -6,7 +6,7 @@ const AddMembers = () => {
         <>
             <div className='offcanvas offcanvas-end offcanvas-aside' data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvas-add-members" style={{ visibility: 'hidden' }} aria-hidden="true">
                 <div className='offcanvas-header py-4 py-lg-7 border-bottom '>
-                    <a className="icon icon-lg text-muted" href="#" data-bs-dismiss="offcanvas">
+                    <a className="icon icon-lg text-muted" href="/" data-bs-dismiss="offcanvas">
                         <i className='icon-angle-left'></i>
                     </a>
                     <div className='visibility-xl-invisible overflow-hidden text-center'>
@@ -20,7 +20,7 @@ const AddMembers = () => {
                 <div className='offcanvas-body hide-scrollbar py-0'>
                     <div className='collapse' id="search-members">
                         <div className='border-bottom py-6'>
-                            <form action='#'>
+                            <form action='/'>
                                 <div className='input-group'>
                                     <div className='input-group-text' id='search-user'>
                                         <div className='icon icon-lg'>
@@ -40,7 +40,7 @@ const AddMembers = () => {
                             <div className='row align-items-center gx-5'>
                                 <div className='col-auto'>
                                     <div className='avatar avatar-online'>
-                                        <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8' />
+                                        <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8' alt=''/>
                                     </div>
                                 </div>
                                 <div className='col'>
@@ -63,7 +63,7 @@ const AddMembers = () => {
                             <div className='row align-items-center gx-5'>
                                 <div className='col-auto'>
                                     <div className='avatar '>
-                                        <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2FOIP.jpg?alt=media&token=f167f20a-40a9-4e7d-af97-4d2bca9249cf' />
+                                        <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2FOIP.jpg?alt=media&token=f167f20a-40a9-4e7d-af97-4d2bca9249cf' alt=''/>
                                     </div>
                                 </div>
                                 <div className='col'>
@@ -82,7 +82,7 @@ const AddMembers = () => {
                     </ul>
                 </div>
                 <div className='offcanvas-footer border-top py-4 py-lg-7'>
-                    <a className='btn btn-lg btn-primary w-100 d-flex align-items-center' href='#'>
+                    <a className='btn btn-lg btn-primary w-100 d-flex align-items-center' href='/'>
                         Add members
                         <span className='icon ms-auto' style={{ transform: 'rotate(180deg)' }}>
                             <i className='icon-angle-left'></i>

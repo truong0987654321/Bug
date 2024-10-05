@@ -16,7 +16,7 @@ const FileContent = ({ chat, customClass }) => {
                 </div>
                 <div className='col overflow-hidden'>
                     <h6 className='text-truncate text-reset'>
-                        <a className='text-reset'>{chat.content.file_name}</a>
+                        <a href="/" className='text-reset'>{chat.content.file_name}</a>
                     </h6>
                     <ul className='list-inline text-uppercase extra-small opacity-75 mb-0'>
                         <li className='list-inline-item'>{chat.content.file_size}</li>

@@ -79,7 +79,7 @@ const SidebarBgLight = ({ chats, isLoading, currentUserId, onChatSelect }) => {
             <div className='container h-100'>
                 <div className='tab-pane fade h-100 active show' id='tab-content-chats'>
                     <div className='d-flex flex-column h-100 position-relative'>
-                        <div className='pt-24'>
+                        <div className='pt-8'>
                             <div className='mb-0'>
                                 <div className='fw-bold m-0' style={{ fontSize: '24px' }}>Chats</div>
                             </div>

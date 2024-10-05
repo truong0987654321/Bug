@@ -212,6 +212,8 @@ const Chats = () => {
                 <>
                     <Helmet>
                         <title>Home | Bug</title>
+                        <link rel="stylesheet" href="./assets/css/chats.css" />
+
                         <script src="./assets/js/vendor.js" async />
                         <script src="./assets/js/template.js" async />
                     </Helmet>

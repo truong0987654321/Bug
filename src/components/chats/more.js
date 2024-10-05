@@ -7,7 +7,7 @@ const More = () => {
         <>
             <div className="offcanvas offcanvas-end offcanvas-aside" data-bs-scroll="true" data-bs-backdrop="false" id="offcanvas-more" aria-hidden="true">
                 <div className='offcanvas-header py-4 py-lg-7 border-bottom'>
-                    <a className="icon icon-lg text-muted" href="#" data-bs-dismiss="offcanvas">
+                    <a className="icon icon-lg text-muted" href="/" data-bs-dismiss="offcanvas">
                         <i className='icon-angle-left'></i>
                     </a>
                     <div className='visibility-xl-invisible overflow-hidden text-center'>
@@ -15,12 +15,12 @@ const More = () => {
                         <p className='text-truncate'>100 members, 3 online</p>
                     </div>
                     <div className='dropdown'>
-                        <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a className="icon icon-lg text-muted" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i className='icon-ellipsis-vertical'></i>
                         </a>
                         <ul className='dropdown-menu'>
                             <li>
-                                <a href="#" className="dropdown-item d-flex align-items-center">
+                                <a href="/" className="dropdown-item d-flex align-items-center">
                                     Edit
                                     <div className="icon ms-auto">
                                         <i className='icon-pen'></i>
@@ -28,7 +28,7 @@ const More = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="dropdown-item d-flex align-items-center">
+                                <a href="/" className="dropdown-item d-flex align-items-center">
                                     Mute
                                     <div className="icon ms-auto">
                                         <i className='icon-bell'></i>
@@ -39,7 +39,7 @@ const More = () => {
                                 <hr className="dropdown-divider" />
                             </li>
                             <li>
-                                <a href="#" className="dropdown-item d-flex align-items-center text-danger">
+                                <a href="/" className="dropdown-item d-flex align-items-center text-danger">
                                     Leave
                                     <div className="icon ms-auto">
                                         <i className='icon-right-from-bracket'></i>
@@ -55,7 +55,7 @@ const More = () => {
                         <div className='row gy-6'>
                             <div className='col-12'>
                                 <div className='avatar avatar-xl mx-auto'>
-                                    <img className="avatar-img" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fmeo-vang-dua-ngon-tay-like.jpg?alt=media&amp;token=03bd5eaf-d99d-4ce9-8e35-af10c77c2470" />
+                                    <img className="avatar-img" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fmeo-vang-dua-ngon-tay-like.jpg?alt=media&amp;token=03bd5eaf-d99d-4ce9-8e35-af10c77c2470" alt='' />
                                 </div>
                             </div>
                             <div className='col-12'>
@@ -65,7 +65,7 @@ const More = () => {
                             <div className='col-12'>
                                 <div className='row d-flex justify-content-center'>
                                     <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Turn off notifications</strong>">
-                                        <a className='avatar avatar-svg mx-auto' href='#'>
+                                        <a className='avatar avatar-svg mx-auto' href='/'>
                                             <span className='avatar-text'>
                                                 <i className='icon-bell'></i>
                                             </span>
@@ -74,7 +74,7 @@ const More = () => {
                                         <p className='py-3 text-truncate'>Turn off notifications</p>
                                     </div>
                                     {/* <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Turn it back on</strong>">
-                                        <a className='avatar avatar-svg mx-auto' href='#'>
+                                        <a className='avatar avatar-svg mx-auto' href='/'>
                                             <span className='avatar-text'>
                                                 <i className='icon-bell-slash'></i>
                                             </span>
@@ -83,7 +83,7 @@ const More = () => {
                                         <p className='py-3 text-truncate'>Turn it back on</p>
                                     </div> */}
                                     <div className='col-3' data-bs-toggle="tooltip" data-bs-original-title="<strong>Name</strong>">
-                                        <a className='avatar  avatar-svg mx-auto' href='#'>
+                                        <a className='avatar  avatar-svg mx-auto' href='/'>
                                             <span className='avatar-text '>
                                                 <i className='icon-pen'></i>
                                             </span>
@@ -119,12 +119,12 @@ const More = () => {
                                 <li className='list-group-item'>
                                     <div className='row align-items-center gx-5'>
                                         <div className='col-auto'>
-                                            <a href='#' className='avatar avatar-online'>
-                                                <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8' />
+                                            <a href='/' className='avatar avatar-online'>
+                                                <img className='avatar-img' src='https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8' alt=''/>
                                             </a>
                                         </div>
                                         <div className='col'>
-                                            <h5><a href='#'>Mew Dark</a></h5>
+                                            <h5><a href='/'>Mew Dark</a></h5>
                                             <p>online</p>
                                         </div>
                                         <div className='col-auto'>
@@ -132,12 +132,12 @@ const More = () => {
                                         </div>
                                         <div className='col-auto'>
                                             <div className='dropdown'>
-                                                <a className="icon text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a className="icon text-muted" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <i className='icon-ellipsis-vertical'></i>
                                                 </a>
                                                 <ul className='dropdown-menu'>
                                                     <li>
-                                                        <a className='dropdown-item d-flex align-items-center'>
+                                                        <a href='/' className='dropdown-item d-flex align-items-center'>
                                                             hmm
                                                             <div className="icon ms-auto">
                                                                 <i className='icon-right-from-bracket'></i>
@@ -148,7 +148,7 @@ const More = () => {
                                                         <hr className="dropdown-divider" />
                                                     </li>
                                                     <li>
-                                                        <a className='dropdown-item d-flex align-items-center text-danger'>
+                                                        <a href='/' className='dropdown-item d-flex align-items-center text-danger'>
                                                             Delete
                                                             <div className="icon ms-auto">
                                                                 <i className='icon-trash'></i>
@@ -165,7 +165,7 @@ const More = () => {
                         <div className='tab-pane fade' id='offcanvas-group-tab-media' role="tabpanel">
                             <div className='row row-cols-3 g-3 py-6'>
                                 <div className='col'>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-media-preview" data-theme-img-url="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2FOIP.jpg?alt=media&token=f167f20a-40a9-4e7d-af97-4d2bca9249cf">
+                                    <a href="/" data-bs-toggle="modal" data-bs-target="#modal-media-preview" data-theme-img-url="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2FOIP.jpg?alt=media&token=f167f20a-40a9-4e7d-af97-4d2bca9249cf">
                                         <img className="img-fluid rounded" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2FOIP.jpg?alt=media&token=f167f20a-40a9-4e7d-af97-4d2bca9249cf" alt="" />
                                     </a>
                                 </div>
@@ -177,10 +177,10 @@ const More = () => {
                                     <div className='row align-items-center gx-5'>
                                         <div className='col-auto'>
                                             <div className='avatar-group'>
-                                                <a href='#' className='avatar avatar-sm'>
-                                                    <img className="avatar-img" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8" />
+                                                <a href='/' className='avatar avatar-sm'>
+                                                    <img className="avatar-img" src="https://firebasestorage.googleapis.com/v0/b/webbug-38054.appspot.com/o/user%2Fhinh-meme-meo-doi.jpg?alt=media&token=b509c3b1-2832-4d41-958f-7d569cc3b2a8" alt=''/>
                                                 </a>
-                                                <a href='#' className='avatar avatar-sm'>
+                                                <a href='/' className='avatar avatar-sm'>
                                                     <span className='avatar-text bg-primary svg-m-r'>
                                                         <i className='icon-file-lines'></i>
                                                     </span>
@@ -189,7 +189,7 @@ const More = () => {
                                         </div>
                                         <div className='col overflow-hidden'>
                                             <h5 className='text-truncate'>
-                                                <a href='#' >
+                                                <a href='/' >
                                                     E5419783-047D-4B4C-B30E-F24DD8247731.JPG
                                                 </a>
                                             </h5>
@@ -204,12 +204,12 @@ const More = () => {
                                         </div>
                                         <div className='col-auto'>
                                             <div className='dropdown svg-w-2rem'>
-                                                <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a className="icon icon-lg text-muted" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <i className='icon-ellipsis-vertical'></i>
                                                 </a>
                                                 <ul className='dropdown-menu'>
                                                     <li>
-                                                        <a href="#" className="dropdown-item d-flex align-items-center">
+                                                        <a href="/" className="dropdown-item d-flex align-items-center">
                                                             Download
                                                             <div className="icon ms-auto">
                                                                 <i className='icon-cloud-arrow-down'></i>
@@ -217,7 +217,7 @@ const More = () => {
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#" className="dropdown-item d-flex align-items-center">
+                                                        <a href="/" className="dropdown-item d-flex align-items-center">
                                                             Share
                                                             <div className="icon ms-auto">
                                                                 <i className='icon-share-nodes'></i>
@@ -228,7 +228,7 @@ const More = () => {
                                                         <hr className="dropdown-divider" />
                                                     </li>
                                                     <li>
-                                                        <a href="#" className="dropdown-item d-flex align-items-center text-danger">
+                                                        <a href="/" className="dropdown-item d-flex align-items-center text-danger">
                                                             Delete
                                                             <div className="icon ms-auto">
                                                                 <i className='icon-trash'></i>

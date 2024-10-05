@@ -8,7 +8,7 @@ const MessageYou = ({ chat, participants }) => {
     return (
         <>
             <div className='message message-out'>
-                <a href='#' className='avatar avatar-responsive'>
+                <a href='/' className='avatar avatar-responsive'>
                     {sender && (
                         <img
                             src={sender.avatar}
@@ -32,12 +32,12 @@ const MessageYou = ({ chat, participants }) => {
                             </div>
                             <div className='message-action'>
                                 <div className='dropdown'>
-                                    <a href='#' className='icon text-muted ' role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                    <a href='/' className='icon text-muted ' role="button" data-bs-toggle="dropdown" aria-expanded="true">
                                         <i className="icon-ellipsis-vertical"></i>
                                     </a>
                                     <ul className='dropdown-menu '>
                                         <li>
-                                            <a className='dropdown-item d-flex align-items-center' href='#'>
+                                            <a className='dropdown-item d-flex align-items-center' href='/'>
                                                 <span className='me-auto'>Edit</span>
                                                 <div className='icon'>
                                                     <i className="icon-pen"></i>
@@ -45,7 +45,7 @@ const MessageYou = ({ chat, participants }) => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a className='dropdown-item d-flex align-items-center' href='#'>
+                                            <a className='dropdown-item d-flex align-items-center' href='/'>
                                                 <span className='me-auto'>Reply</span>
                                                 <div className='icon'>
                                                     <i className="icon-reply"></i>
@@ -56,7 +56,7 @@ const MessageYou = ({ chat, participants }) => {
                                             <hr className='dropdown-divider' />
                                         </li>
                                         <li>
-                                            <a className='dropdown-item d-flex align-items-center text-danger' href='#'>
+                                            <a className='dropdown-item d-flex align-items-center text-danger' href='/'>
                                                 <span className='me-auto'>Delete</span>
                                                 <div className='icon'>
                                                     <i className="icon-trash"></i>

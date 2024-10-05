@@ -1,11 +1,11 @@
-import React, { Children, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Chats from './components/chats/index'
-import Auth from './components/chats/auth/index'
-import Profile from './components/chats/profile';
+import Auth from './components/auth/index'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useAppstore } from './store';
 import apiClient from './lib/api-client';
 import { GET_USER_INFO } from './utils/constants';
+import Profile from './components/profile';
 
 const PrivateRoute = ({ Children }) => {
     const { userInfo } = useAppstore();
@@ -18,16 +18,16 @@ const AuthRoute = ({ Children }) => {
     return isAuthenticated ? <Navigate to={"/"} /> : Children
 }
 
-function App() {
+export function App() {
     const { userInfo, setuserInfo } = useAppstore();
-    const [ loading, setLoading ] = useState(true);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const getUserData = async () => {
             try {
                 const response = await apiClient.get(
                     GET_USER_INFO,
                     { withCredentials: true })
-                    console.log(response)
+                console.log(response)
             } catch (error) {
                 console.log({ error });
 
@@ -49,7 +49,7 @@ function App() {
                     // <AuthRoute>
                     //     <Auth />
                     // </AuthRoute>
-                                            <Auth />
+                    <Auth />
                 } />
 
                 <Route path='/profile' element={
@@ -67,4 +67,3 @@ function App() {
     )
 }
 
-export default App;  

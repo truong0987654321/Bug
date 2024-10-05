@@ -3,8 +3,8 @@ const Navbar = ({ currentUser, unreadCount }) => {
 
     return (
         <nav className='navigation d-flex flex-column text-center navbar navbar-light hide-scrollbar'>
-            <a href='#' className='d-none d-xl-block mb-6'>
-                <i className='icon-logo'></i>
+            <a href='/' className='d-none d-xl-block mb-6'>
+                <i className='icon-logo' style={{ fontSize: 46 }}></i>
             </a>
             <ul className='d-flex nav navbar-nav flex-row flex-xl-column flex-grow-1 justify-content-between justify-content-xl-center align-items-center w-100 py-4 py-lg-2 px-lg-3'>
                 <li className='nav-item d-none d-xl-block invisible flex-xl-grow-1'></li>
@@ -35,7 +35,7 @@ const Navbar = ({ currentUser, unreadCount }) => {
                     </a>
                 </li>
                 <li className='nav-item d-none d-xl-block'>
-                    <a href='#' className='nav-link p-0 mt-lg-2'>
+                    <a href='/' className='nav-link p-0 mt-lg-2'>
                         <div className='avatar avatar-online mx-auto'>
                             <img className='avatar-img' src={currentUser.avatar} alt='' />
                         </div>

@@ -10,12 +10,12 @@ const MediaPreview = () => {
                             <button type="button" className="btn-close btn-close-arrow" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div>
                                 <div className='dropdown svg-w-2rem'>
-                                    <a className="icon icon-lg text-muted" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="icon icon-lg text-muted" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i className='icon-ellipsis-vertical'></i>
                                     </a>
                                     <ul className='dropdown-menu'>
                                         <li>
-                                            <a href="#" className="dropdown-item d-flex align-items-center">
+                                            <a href="/" className="dropdown-item d-flex align-items-center">
                                                 Download
                                                 <div className="icon ms-auto">
                                                     <i className='icon-cloud-arrow-down'></i>
@@ -23,7 +23,7 @@ const MediaPreview = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" className="dropdown-item d-flex align-items-center">
+                                            <a href="/" className="dropdown-item d-flex align-items-center">
                                                 Share
                                                 <div className="icon ms-auto">
                                                     <i className='icon-share-nodes'></i>
@@ -34,7 +34,7 @@ const MediaPreview = () => {
                                             <hr className="dropdown-divider" />
                                         </li>
                                         <li>
-                                            <a href="#" className="dropdown-item d-flex align-items-center text-danger">
+                                            <a href="/" className="dropdown-item d-flex align-items-center text-danger">
                                             Delete
                                                 <div className="icon ms-auto">
                                                     <i className='icon-trash'></i>
@@ -47,13 +47,13 @@ const MediaPreview = () => {
                         </div>
                         <div className='modal-body p-0'>
                             <div className='d-flex align-items-center justify-content-center h-100'>
-                                <img className='img-fluid modal-preview-url' src=''/>
+                                <img className='img-fluid modal-preview-url' src='' alt=''/>
                             </div>
                         </div>
                         <div className='modal-footer'>
                             <div className='w-100 text-center'>
                                 <h6>
-                                    <a href='#'></a>
+                                    <a href='/'>dark meo</a>
                                 </h6>
                                 <p className='small'>Today at 14:43</p>
                             </div>

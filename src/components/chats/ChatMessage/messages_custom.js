@@ -27,7 +27,7 @@ const MessageCustom = ({ chat, currentUserId }) => {
                         <div className='col-12'>
                             <div className='row d-flex justify-content-center'>
                                 <div className='col-auto'>
-                                    <a className='avatar avatar-svg mx-auto' href='#'>
+                                    <a className='avatar avatar-svg mx-auto' href='/'>
                                         <span className='avatar-text'>
                                             <i className="icon-user-plus"></i>
                                         </span>
@@ -35,7 +35,7 @@ const MessageCustom = ({ chat, currentUserId }) => {
                                     <p className='py-3'>Thêm</p>
                                 </div>
                                 <div className='col-auto'>
-                                    <a className='avatar avatar-svg mx-auto' href='#'>
+                                    <a className='avatar avatar-svg mx-auto' href='/'>
                                         <span className='avatar-text '>
                                             <i className="icon-pen"></i>
                                         </span>

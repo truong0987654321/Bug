@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Tabs } from '@navikt/ds-react';
-import apiClient from "../../../lib/api-client";
-import { LOGIN_ROUTE, SIGNUP_ROUTE } from '../../../utils/constants';
+import { LOGIN_ROUTE, SIGNUP_ROUTE } from '../../utils/constants';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import { useAppstore } from '../../../store';
+import { useAppstore } from '../../store';
+import apiClient from '../../lib/api-client';
 const icon = '/assets/img/login2.png';
 
 
@@ -92,6 +92,7 @@ const Auth = () => {
         <>
             <Helmet>
                 <title>Auth | Bug</title>
+                <link rel="stylesheet" href="./assets/css/auth.css" />
             </Helmet>
             <ToastContainer />
             <div className='h-100vh w-100vw d-flex justify-content-center align-items-center'>
