@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Bỏ qua thư mục node_modules
 node_modules/
 
 # Bỏ qua các file môi trường
 .env
 .env.* 
+=======
+node_modules/
+>>>>>>> 38ecdd9e3a6ea1e63b8302b32398b1b759049ccd
